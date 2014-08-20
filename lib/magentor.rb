@@ -19,6 +19,7 @@ require 'magentor/connection'
 require 'magentor/base'
 
 module Magentor
+  autoload :Cart,                "magentor/cart"
   autoload :CategoryAttribute,   "magentor/category_attribute"
   autoload :Category,            "magentor/category"
   autoload :Country,             "magentor/country"
