@@ -19,8 +19,8 @@ module Magentor
       # int $parentId - ID of parent category
       # array $categoryData - category data ( array(’attribute_code’⇒‘attribute_value’ )
       # mixed $storeView - store view ID or code (optional)
-      def create(attributes)
-        id = commit("create", attributes)
+      def create(parentId, attributes)
+        id = commit("create", parentId, attributes)
         record = new(attributes)
         record.id = id
         record
