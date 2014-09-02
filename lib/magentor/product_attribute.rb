@@ -44,6 +44,30 @@ module Magentor
       def options(*args)
         commit("options", *args)
       end
+
+      # product_attribute.addOption
+      # Allows you to add a new option for attributes with selectable fields.
+      #
+      # Return: boolean
+      #
+      # Arguments:
+      #
+      # string attribute - Attribute code or ID
+      # array data - Array of catalogProductAttributeOptionEntityToAdd
+      #
+      # The catalogProductAttributeOptionEntityToAdd content is as follows:
+      #
+      # array label - Array of catalogProductAttributeOptionLabel
+      # int order - Option order
+      # int is_default - Defines whether the option is a default one
+      #
+      # The catalogProductAttributeOptionLabel content is as follows:
+      #
+      # ArrayOfString store_id - Array of store view IDs
+      # string value - Text label
+      def addOption(*args)
+        commit("addOption", *args)
+      end
     end
   end
 end
